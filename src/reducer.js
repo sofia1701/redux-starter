@@ -1,7 +1,7 @@
 let lastId = 0;
 
 export default function reducer(state = [], action) {
-	if (action.type === 'bugAdeed')
+	if (action.type === 'bugAdded')
 		return [
 			...state,
 			{
@@ -13,5 +13,5 @@ export default function reducer(state = [], action) {
   else if (action.type === 'bugRemoved') 
     return state.filter((bug) => bug.id !== action.payload.id);
 
-  return state;
+	return state;
 }
